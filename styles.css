@@ -5,6 +5,7 @@ body {
     font-family: Roboto, roboto serif;
     font-size: 16px;
     background-color: #f5f3ef;
+    max-width: 390px;
 }
 
 header, main, footer {
@@ -13,18 +14,41 @@ header, main, footer {
 
 .header-container {
     display:grid;
-    justify-items: center;
-    border: red solid 10px;
+    grid-template-columns: 330px 40px;
+    grid-template-areas:
+    "logo menu";
+    padding-top: 24px;
+    border:red solid 2px;
+    Height
 }
 
-.logo {
-    grid-area: logo;
-    border:solid green 5px;
+.logo-container {
+grid-area: logoContainer;
+text-align:center;
+border: blue solid 2px;
+}
+
+
+
+.menu-container{
+    grid-area: menu;
+    border: solid purple 2px;
 }
 
 .menu {
-    grid-area: logo;
+    width: 32px;
+    height: 32px;
 }
+
+.main-grid-container {
+    display:grid;
+    grid-template-columns: auto;
+}
+.h1-container {
+    width: 342px;
+    height: 126px;
+}
+
 
 /* Tablet styles */
 @media (min-width: 768px) {
