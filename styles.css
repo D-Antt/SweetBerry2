@@ -52,7 +52,6 @@ text-align : center;
     "image";
     height: 560px;
     margin-top: 20px;
-    border: red solid 2px;
     justify-items:center;
 }
 .h1-container {
@@ -60,7 +59,6 @@ text-align : center;
     width: 342px;
     height: 170px;
     text-align: center;
-    border: solid green 2px;
 }
 
 .h1-main {
@@ -71,7 +69,6 @@ text-align : center;
     grid-area: paragraph;
     text-align: center;
     height: 120px;
-    border: solid lightgreen 2px;
 }
 
 .main-paragraph {
@@ -86,7 +83,6 @@ text-align : center;
     grid-area: image;
     width: 100%;
     height: 250px;
-    border: solid purple 2px;
 }
 
 .people-photo {
@@ -95,8 +91,53 @@ text-align : center;
 
 .class-choice-container {
     display:grid;
-    grid-template-columns:stretch;
+    grid-template-columns:auto;
     grid-template-rows: repeat(6, auto);
+    grid-template-areas: 
+    "classHeader"
+    "chefSkills"
+    "essentials"
+    "plantBased"
+    "teensKitchen";
+}
+
+.class-header-item {
+    grid-area: classHeader;
+    background-color: #febd24;
+    height: 132px;
+    width: 342px;
+    margin: 30px 20px 0 20px;
+    border-radius: 20px;
+}
+
+.class-h2 {
+padding: 20px 70px 20px 25px;
+font-family: Roboto;
+font-size: 26px;
+}
+
+.class-item {
+
+}
+
+.chef-skills {
+    grid-area: chefSkills;
+}
+
+.cooking-essentials {
+    grid-area: essentials;
+}
+
+.nutrtition {
+    grid-area: nutrition;
+}
+
+.plant-based {
+    grid-area: plantBased;
+}
+
+.teens-kitchen {
+    grid-area: teensKitchen;
 }
 
 
