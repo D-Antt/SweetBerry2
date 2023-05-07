@@ -18,21 +18,23 @@ header, main, footer {
     grid-template-areas:
     "logo menu";
     padding-top: 24px;
-    border:red solid 2px;
-    Height
 }
 
 .logo-container {
-grid-area: logoContainer;
-text-align:center;
-border: blue solid 2px;
+grid-area: logo;
+text-align : center;
+}
+
+.logo {
+    width: 130px;
+    height: 32px;
+    padding-left: 55px;
 }
 
 
 
 .menu-container{
     grid-area: menu;
-    border: solid purple 2px;
 }
 
 .menu {
@@ -42,11 +44,49 @@ border: blue solid 2px;
 
 .main-grid-container {
     display:grid;
-    grid-template-columns: auto;
+    grid-template-columns: stretch;
+    grid-template-rows: repeat(3,stretch);
+    grid-template-areas:
+    "header"
+    "paragraph"
+    "image";
+    height: 482px;
+    margin-top: 20px;
+    border: red solid 2px;
+    justify-items:center;
 }
 .h1-container {
+    grid-area: header;
     width: 342px;
-    height: 126px;
+    height: 170px;
+    text-align: center;
+    border: solid green 2px;
+}
+
+.h1-main {
+    font-size: 38px;
+}
+
+.paragraph-container {
+    grid-area: paragraph;
+    text-align: center;
+    height: 120px;
+    border: solid lightgreen 2px;
+}
+
+.main-paragraph {
+    margin: 0 10px 0 10px;
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.couple-image-container {
+    grid-area: image;
+    width: 100%;
+    height: 230px;
+    border: solid purple 2px;
 }
 
 
