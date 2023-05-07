@@ -92,13 +92,14 @@ text-align : center;
 .class-choice-container {
     display:grid;
     grid-template-columns:auto;
-    grid-template-rows: repeat(6, auto);
+    grid-template-rows: repeat(6, 1fr);
     grid-template-areas: 
     "classHeader"
     "chefSkills"
     "essentials"
     "plantBased"
     "teensKitchen";
+    gap: 40px;
 }
 
 .class-header-item {
@@ -117,7 +118,8 @@ font-size: 26px;
 }
 
 .class-item {
-
+    background-color: white;
+    margin: 10px 20px 10px 20px;
 }
 
 .chef-skills {
