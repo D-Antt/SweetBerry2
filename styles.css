@@ -50,7 +50,7 @@ text-align : center;
     "header"
     "paragraph"
     "image";
-    height: 482px;
+    height: 560px;
     margin-top: 20px;
     border: red solid 2px;
     justify-items:center;
@@ -75,9 +75,9 @@ text-align : center;
 }
 
 .main-paragraph {
-    margin: 0 10px 0 10px;
+    margin: 0 15px 0 15px;
     font-family: Roboto;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 400;
     line-height: 24px;
 }
@@ -85,8 +85,18 @@ text-align : center;
 .couple-image-container {
     grid-area: image;
     width: 100%;
-    height: 230px;
+    height: 250px;
     border: solid purple 2px;
+}
+
+.people-photo {
+    padding: 20px 20px 0 20px;
+}
+
+.class-choice-container {
+    display:grid;
+    grid-template-columns:stretch;
+    grid-template-rows: repeat(6, auto);
 }
 
 
