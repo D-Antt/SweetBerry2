@@ -2,7 +2,7 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: Roboto, Roboto Serif;
+    font-family: Roboto Serif;
     font-size: 16px;
     background-color: #f5f3ef;
     max-width: 390px;
@@ -91,6 +91,7 @@ text-align : center;
 
 .class-choice-container {
     display:grid;
+    width:100%;
     grid-template-columns: auto;
     grid-template-rows: repeat(6, stretch);
     grid-template-areas: 
@@ -124,12 +125,18 @@ font-size: 24px;
     flex-direction: column;
     position:relative;
     background-color: white;
-    margin: 10px 20px 10px 20px;
+    margin: 10px 10px 10px 25px;
     height:250px;
+    width: 300px;
     padding-left: 20px;
     padding-right: 20px;
     border-radius: 30px;
     border: solid purple 2px;
+}
+
+.class-header {
+    font-size: 22px;
+    font-weight: 700;
 }
 
 .knife,
@@ -161,6 +168,12 @@ font-size: 24px;
 
 .teens-kitchen {
     grid-area: teensKitchen;
+}
+
+.class-button {
+    border-radius: 40px;
+    width:120px;
+    height: 40px;
 }
 
 .footer-container {
