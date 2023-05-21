@@ -5,7 +5,6 @@ body {
     font-family: Roboto, Roboto Serif;
     font-size: 16px;
     background-color: #f5f3ef;
-    max-width: 390px;
 }
 
 header, main, footer {
@@ -18,7 +17,17 @@ header, main, footer {
     grid-template-areas:
     "logo menu";
     padding-top: 24px;
+    
 }
+
+.menu-container .logo {
+    display: block; /* This will show the image on mobile */
+}
+
+.menu-container .tabletOnly {
+    display: none; /* This will hide the button on mobile */
+}
+
 
 .logo-container {
 grid-area: logo;
@@ -210,8 +219,78 @@ font-size: 24px;
 
 /* Tablet styles */
 @media (min-width: 768px) {
+    @media (min-width: 768px) {
+        .menu-container .menu {
+            display: none; /* This will hide the image on tablet and up */
+        }
+    
+        .menu-container .tabletOnly {
+            display: block; /* This will show the button on tablet and up */
+        }
+    }
+
+    .header-container {
+        display:grid;
+        grid-template-columns: 330px 40px;
+        grid-template-areas:
+        "logo menu";
+        padding-top: 24px;
+        border:solid red 2px;
+        
+    }
+    
+    .logo-container {
+    grid-area: logo;
+    text-align : center;
+    }
+    
+    .logo {
+        width: 130px;
+        height: 32px;
+    }
+    
+    
+    
+    .menu-container{
+        grid-area: menu;
+    }
+    
+    .menu {
+        width: 32px;
+        height: 32px;
+    }
+
+    .class-choice-container {
+        grid-template-columns: 1fr 1fr; /* Define two columns for tablet */
+        grid-template-rows: auto auto auto; /* Define three rows for the classes */
+        grid-template-areas: 
+            "classHeader chefSkills"
+            "essentials nutrition"
+            "plantBased teensKitchen"; 
+        gap: 20px;
+    }
+    .class-header-item {
+        grid-area: classHeader;
+    }
+    .chef-skills {
+        grid-area: chefSkills;
+    }
+    .cooking-essentials {
+        grid-area: essentials;
+    }
+    .nutrtition {
+        grid-area: nutrition;
+    }
+    .plant-based {
+        grid-area: plantBased;
+    }
+    .teens-kitchen {
+        grid-area: teensKitchen;
+    }
+}
     body {
         font-size: 18px;
+        max-width: 768px;
     }
 
     main {
