@@ -216,24 +216,78 @@ font-size: 24px;
     width:100px;
 }
 
+.tablet-and-above {
+    display: none; /* This will hide the links on mobile */
+    grid-area: nav;
+}
+
+.logo-container {
+    grid-area: logo;
+}
+
+.header-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-areas: "nav logo menu";
+    justify-items: center;
+    align-items: center;
+}
+
 
 /* Tablet styles */
 @media (min-width: 768px) {
-    @media (min-width: 768px) {
-        .menu-container .menu {
-            display: none; /* This will hide the image on tablet and up */
+    .tablet-and-above {
+        display: flex; /* This will show the links on tablet and up */
+        justify-content: flex-start;
+    }
+
+    .tablet-and-above a {
+        margin-right: 10px; /* Add some space between the links */
+        text-decoration: none; /* Optional: Remove the underline */
+        color: inherit; /* Optional: Make the links the same color as your text */
+    }
+    .tablet-and-above {
+    display: none; /* This will hide the links on mobile */
+    grid-area: nav;
+}
+
+.logo-container {
+    grid-area: logo;
+}
+
+
+
+.header-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-areas: "nav logo menu";
+    justify-items: center;
+    align-items: center;
+}
+    .menu-container .menu {
+        display: none; /* This will hide the image on tablet and up */
         }
     
-        .menu-container .tabletOnly {
-            display: block; /* This will show the button on tablet and up */
+    .menu-container .tablet-only {
+        display: block; /* This will show the button on tablet and up */
         }
+    }
+
+    .tablet-only {
+        grid-area: tablet;
+        border: 1px solid lightgray;
+        background-color: white;
+        border-radius: 40px;
+        width:120px;
+        height: 40px;
+        font-weight:bold;
     }
 
     .header-container {
         display:grid;
-        grid-template-columns: 330px 40px;
+        grid-template-columns: 600px 40px;
         grid-template-areas:
-        "logo menu";
+        "logo tablet";
         padding-top: 24px;
         border:solid red 2px;
         
@@ -287,7 +341,7 @@ font-size: 24px;
     .teens-kitchen {
         grid-area: teensKitchen;
     }
-}
+
     body {
         font-size: 18px;
         max-width: 768px;
@@ -306,7 +360,38 @@ font-size: 24px;
     aside {
         width: 48%;
     }
-}
+    .h1-container {
+        grid-area: header;
+        width: 580px;
+        height: 170px;
+        text-align: center;
+    }
+    
+    .h1-main {
+        font-size: 46px;
+        font-family: Roboto;
+    }
+    .main-paragraph {
+        margin: 0 70px 0 70px;
+        font-family: Roboto;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 24px;
+        border: solid blue 3px;
+    }
+    .couple-image-container {
+        grid-area: image;
+        width: 700px;
+        height: 370px;
+        border: purple solid 3px;
+    }
+    
+    .people-photo {
+        width: 680px;
+        height: 360px;
+        align-items: center;
+    }
+        
 
 /* Desktop styles */
 @media (min-width: 1024px) {
