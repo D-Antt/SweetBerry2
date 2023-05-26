@@ -30,7 +30,7 @@ header {
   }
   
   .burger-menu {
-    display: none;
+    display: block;
   }
   
   .get-started {
