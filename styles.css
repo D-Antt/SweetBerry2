@@ -12,11 +12,10 @@ header, main, footer {
 }
 
 .header-container {
-    display:grid;
-    grid-template-columns: 330px 40px;
-    grid-template-areas:
-    "logo menu";
-    padding-top: 24px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
     
 }
 
@@ -30,14 +29,12 @@ header, main, footer {
 
 
 .logo-container {
-grid-area: logo;
 text-align : center;
 }
 
 .logo {
     width: 130px;
-    height: 32px;
-    padding-left: 55px;
+    height: auto;
 }
 
 
@@ -217,10 +214,7 @@ font-size: 24px;
 }
 
 .tablet-and-above {
-    display: none; /* This will hide the links on mobile */
-    grid-area: nav;
-}
-
+    display: none;
 .logo-container {
     grid-area: logo;
 }
@@ -264,23 +258,14 @@ font-size: 24px;
     justify-items: center;
     align-items: center;
 }
-    .menu-container .menu {
-        display: none; /* This will hide the image on tablet and up */
-        }
-    
-    .menu-container .tablet-only {
-        display: block; /* This will show the button on tablet and up */
-        }
-    }
 
-    .tablet-only {
-        grid-area: tablet;
-        border: 1px solid lightgray;
-        background-color: white;
-        border-radius: 40px;
-        width:120px;
-        height: 40px;
-        font-weight:bold;
+.tablet-only {
+    display: none;
+    border: 1px solid lightgray;
+    background-color: white;
+    border-radius: 40px;
+    padding: 10px 20px;
+    font-weight: bold;
     }
 
     .header-container {
@@ -384,12 +369,26 @@ font-size: 24px;
         width: 700px;
         height: 370px;
         border: purple solid 3px;
+        align-items: center;
     }
     
     .people-photo {
-        width: 680px;
+        width: 660px;
         height: 360px;
-        align-items: center;
+    }
+    .main-grid-container {
+        display:grid;
+        grid-template-columns: stretch;
+        grid-template-rows: repeat(3,stretch);
+        grid-template-areas:
+        "header"
+        "paragraph"
+        "image";
+        height: 700px;
+        margin-top: 20px;
+        justify-items:center;
+        border: solid green 3px;
+        margin-bottom: 50px;
     }
         
 
