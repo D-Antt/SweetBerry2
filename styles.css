@@ -1,5 +1,6 @@
 body {
     display: grid;
+    background-color: #f5f3ef;
     font-family: 'Roboto Serif', serif;
     grid-template-areas: 
     "header"
@@ -44,7 +45,10 @@ header {
     margin-right: 10px;
   }
   
-  .inactive-link {
+  .inactive-link1 {
+    display: none;
+  }
+  .inactive-link2 {
     display: none;
   }
   
@@ -119,7 +123,8 @@ header {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     justify-items: center;
-    gap: 20px;
+    gap: 40px;
+    margin-bottom: 40px;
   }
   .second-section-title {
     background-color: #febd24;
@@ -132,21 +137,68 @@ header {
 .explore {
   margin: 20px 50px 10px 20px;
   font-size: 28px;
+}
 
+.same-format h3 {
+  padding: 4px 48px 10px 25px;
+font-family: Roboto serif;
+font-size: 24px;
+}
+
+.same-format p {
+  margin-top: 0px;
+  font-size: 16px;
+  font-weight: 100;
+  color:#646464;
+  line-height:23px;
+  height:100px;
+}
+
+.same-format button {
+  border: 1px solid lightgray;
+  background-color: white;
+  border-radius: 40px;
+  width:120px;
+  height: 40px;
+  font-weight:bold;
+}
+
+.knife,
+.burger,
+.leaf,
+.clipboard,
+.pot {
+    position:absolute;
+    top: -40px;
+    right:30px;
+    height: 75px;
+    width: 70px;
+}
+
+.same-format {
+  display:flex;
+    flex-direction: column;
+    position:relative;
+    background-color: white;
+    margin: 10px 10px 10px 25px;
+    height:250px;
+    width: 300px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 30px;
 }
 
   footer {
     background-color: #FEBD2F;
-    padding: 0;
-    margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
+    height:60px;
     width: 100%;
   }
   
   .footer-image {
-    max-width: 100%;
+    width: 100px;
     height: auto;
   }
   
@@ -156,13 +208,25 @@ header {
 @media (min-width: 768px) {
     .left-section {
       justify-content: flex-start;
+      padding-left: 75px;
     }
   
     .right-section {
       justify-content: flex-end;
     }
-  
-    .inactive-link {
+    a {
+      text-decoration: none;
+      color:black;
+      font-size: 22px;
+    }
+
+    .inactive-link1 {
+      display: inline-block;
+      text-decoration: none;
+    }
+   
+    }
+    .inactive-link2 {
       display: inline-block;
     }
   
@@ -187,7 +251,7 @@ header {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto;
       }
-    }
+    
 
 
   @media (min-width: 1024px) {
