@@ -1,11 +1,13 @@
 body {
     display: grid;
+    font-family: 'Roboto Serif', serif;
     grid-template-areas: 
     "header"
     "main"
     "footer";
     grid-template-rows: auto 1fr auto;
     height: 100vh;
+    border: solid blueviolet 5px;
 }
 
 header {
@@ -14,15 +16,31 @@ header {
     grid-template-columns: auto 1fr auto;
     justify-items: center;
     align-items: center;
+    margin-top: 10px;
   }
   .left-section {
     justify-self: start;
     display: flex;
     gap: 10px;
+    border:orange solid 2px;
+  }
+
+  .center-section {
+    display:flex;
+    justify-content: center;
+    margin-left: 50px;
+    height: 40px;
+    width: 250px;
+  }
+
+  .center-image {
+    width: 90%;
+    height: 35px;
   }
   
   .right-section {
     justify-self: end;
+    margin-right: 10px;
   }
   
   .inactive-link {
@@ -47,32 +65,75 @@ header {
   
   .first-section {
     display: grid;
-    grid-template-areas: 
-      "title"
-      "description"
-      "image";
+    grid-template-areas:
+      "title-description"
+      "section-image-container";
     grid-template-columns: 1fr;
-    justify-items: center;
-    align-items: center;
     gap: 20px;
+  }
+  
+  .title-description {
+    grid-area: title-description;
     text-align: center;
+    border: solid lightcoral 3px;
+    margin-top: 15px;
+  }
+  
+  .section-image-container {
+    grid-area: section-image-container;
+    display: flex;
+    justify-content: center;
+    border:solid darkred 3px;
   }
   
   .section-title {
-    font-size: 24px;
-    grid-area: title;
+    font-size: 42px;
+    border: solid blue 2px;
   }
   
   .section-description {
-    font-size: 16px;
-    grid-area: description;
+    font-size: 22px;
+    border: solid orangered 2px;
   }
   
   .section-image {
     max-width: 100%;
     height: auto;
-    grid-area: image;
+    border: solid green 2px;
   }
+  
+  .second-section {
+    grid-area: second-section;
+    display: grid;
+    grid-template-areas: 
+      "title"
+      "chef-skills"
+      "cooking-essentials"
+      "nutrition-cooking"
+      "plant-based"
+      "tenns";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    justify-items: center;
+    gap: 20px;
+  }
+
+  footer {
+    background-color: #FEBD2F;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .footer-image {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  
   
 
 @media (min-width: 768px) {
@@ -95,18 +156,39 @@ header {
     .get-started {
       display: block;
     }
-  }
+  
+   
+    
+      .second-section {
+        grid-template-areas: 
+          "title"
+          "chef-skills"
+          "cooking-essentials"
+          "nutrition-cooking"
+          "plant-based"
+          "tenns";
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+      }
+    }
+
 
   @media (min-width: 1024px) {
     .get-started {
       margin-right: 50px;
     }
     .first-section {
-        grid-template-areas: 
-          "title image"
-          "description image";
-        grid-template-columns: 1fr auto;
-        text-align: left;
-        align-items: start;
+        grid-template-areas:
+          "title-description section-image-container";
+        grid-template-columns: 1fr 1fr;
       }
-  }
+    
+    .second-section {
+        grid-template-areas: 
+          "title title title"
+          "chef-skills cooking-essentials nutrition-cooking"
+          "plant-based plant-based tenns";
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
+      }
+ }
