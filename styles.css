@@ -8,6 +8,7 @@ body {
     grid-template-rows: auto 1fr auto;
     height: 100vh;
     border: solid blueviolet 5px;
+    margin: 0;
 }
 
 header {
@@ -61,6 +62,7 @@ header {
 
   main {
     grid-area: main;
+    max-width: 100%;
   }
   
   .first-section {
@@ -87,12 +89,14 @@ header {
   }
   
   .section-title {
-    font-size: 42px;
+    font-size: 38px;
+    padding: 0 40px;
     border: solid blue 2px;
   }
   
   .section-description {
     font-size: 22px;
+    padding: 0 10px;
     border: solid orangered 2px;
   }
   
@@ -106,17 +110,30 @@ header {
     grid-area: second-section;
     display: grid;
     grid-template-areas: 
-      "title"
+      "second-section-title"
       "chef-skills"
       "cooking-essentials"
       "nutrition-cooking"
       "plant-based"
-      "tenns";
+      "teens";
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     justify-items: center;
     gap: 20px;
   }
+  .second-section-title {
+    background-color: #febd24;
+    height: 132px;
+    width: 342px;
+    margin: 60px 20px 0 20px;
+    border-radius: 24px;
+}
+
+.explore {
+  margin: 20px 50px 10px 20px;
+  font-size: 28px;
+
+}
 
   footer {
     background-color: #FEBD2F;
@@ -166,7 +183,7 @@ header {
           "cooking-essentials"
           "nutrition-cooking"
           "plant-based"
-          "tenns";
+          "teens";
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto;
       }
@@ -187,7 +204,7 @@ header {
         grid-template-areas: 
           "title title title"
           "chef-skills cooking-essentials nutrition-cooking"
-          "plant-based plant-based tenns";
+          "plant-based plant-based teens";
         grid-template-columns: 1fr 1fr 1fr;
         gap: 20px;
       }
