@@ -74,7 +74,6 @@ header {
       "title-description"
       "section-image-container";
     grid-template-columns: 1fr;
-    gap: 20px;
   }
   
   .title-description {
@@ -124,7 +123,6 @@ header {
     background-color: #febd24;
     height: 132px;
     width: 342px;
-    margin: 60px 20px 0 20px;
     border-radius: 24px;
 }
 
@@ -288,10 +286,24 @@ font-size: 24px;
         grid-template-rows: 1fr 1fr 1fr;
         row-gap: 60px;
         column-gap: 5px;
-        margin: 30px 5px;
         padding: 0;
+        margin: 0;
       }
-    }
+
+      .second-section-title {
+        background-color: #febd24;
+        height:250px;
+        width: 300px;
+        border-radius: 24px;
+      }
+
+      .explore {
+        font-size: 34px;
+        margin:0;
+        padding:0;
+      }
+
+
 
 
   @media (min-width: 1024px) {
