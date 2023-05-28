@@ -6,10 +6,12 @@ body {
     "header"
     "main"
     "footer";
-    grid-template-rows: auto 1fr auto;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: 100%;
     height: 100vh;
     border: solid blueviolet 5px;
-    margin: 0;
+    margin:0;
+    padding:0;
 }
 
 header {
@@ -21,16 +23,13 @@ header {
     margin-top: 10px;
   }
   .left-section {
-    justify-self: start;
-    display: flex;
-    gap: 10px;
-    border:orange solid 2px;
+    display: none;
   }
 
   .center-section {
     display:flex;
     justify-content: center;
-    margin-left: 50px;
+    place-items: center;
     height: 40px;
     width: 250px;
   }
@@ -66,7 +65,7 @@ header {
 
   main {
     grid-area: main;
-    max-width: 100%;
+    box-sizing: content-box;
   }
   
   .first-section {
@@ -81,7 +80,6 @@ header {
   .title-description {
     grid-area: title-description;
     text-align: center;
-    border: solid lightcoral 3px;
     margin-top: 15px;
   }
   
@@ -89,25 +87,21 @@ header {
     grid-area: section-image-container;
     display: flex;
     justify-content: center;
-    border:solid darkred 3px;
   }
   
   .section-title {
     font-size: 38px;
     padding: 0 40px;
-    border: solid blue 2px;
   }
   
   .section-description {
     font-size: 22px;
     padding: 0 10px;
-    border: solid orangered 2px;
   }
   
   .section-image {
     max-width: 100%;
     height: auto;
-    border: solid green 2px;
   }
   
   .second-section {
@@ -206,28 +200,49 @@ font-size: 24px;
   
 
 @media (min-width: 768px) {
+  header {
+    height: 70px;
+  }
     .left-section {
-      justify-content: flex-start;
-      padding-left: 75px;
+      display:flex;
+      justify-content: space-around;
+      padding-left: 30px;
+      width: 230px;
     }
   
     .right-section {
       justify-content: flex-end;
     }
+  
     a {
       text-decoration: none;
       color:black;
-      font-size: 22px;
+      font-size: 18px;
     }
 
     .inactive-link1 {
       display: inline-block;
       text-decoration: none;
+      margin-right: 30px;
     }
-   
-    }
+
     .inactive-link2 {
       display: inline-block;
+      margin-left: 30px;
+    }
+
+    .center-section {
+      display:flex;
+      justify-content: center;
+      height: 50px;
+      width: 400px;
+    }
+  
+    .center-image {
+      position: relative;
+      right: 90px;
+      width: 90%;
+      height: 45px;
     }
   
     .burger-menu {
@@ -236,22 +251,29 @@ font-size: 24px;
   
     .get-started {
       display: block;
+      color:white;
+      background-color: black;
+      border-radius: 40px;
+      width:120px;
+      height: 40px;
+      font-weight:bold;
+      margin: 0;
     }
   
    
     
       .second-section {
         grid-template-areas: 
-          "title"
+          "second-section-title"
           "chef-skills"
           "cooking-essentials"
           "nutrition-cooking"
           "plant-based"
           "teens";
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 1fr 1fr 1fr;
       }
-    
+    }
 
 
   @media (min-width: 1024px) {
@@ -266,9 +288,8 @@ font-size: 24px;
     
     .second-section {
         grid-template-areas: 
-          "title title title"
-          "chef-skills cooking-essentials nutrition-cooking"
-          "plant-based plant-based teens";
+          "second-section-title chef-skills cooking-essentials"
+          "nutrition-cooking plant-based teens";
         grid-template-columns: 1fr 1fr 1fr;
         gap: 20px;
       }
